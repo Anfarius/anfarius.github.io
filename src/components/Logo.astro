@@ -1,0 +1,36 @@
+---
+// Animated Logo
+---
+
+<div class="logo-container">
+    <img src="/src/assets/Logo/Caret_white.png" alt="caret" class="caret" />
+    <img src="/src/assets/Logo/<_white.png" alt="<" />
+</div>
+
+<style>
+    .logo-container {
+
+        display: flex;
+        align-items: stretch;
+        gap: 15px;
+        height: 128px;
+        width: 128px;
+        padding: 15px;
+        background: var(--accent);
+        border-radius: 10px;
+    }
+
+    .caret {
+        animation: blink 1s steps(1) infinite;
+    }
+
+    img {
+        display: block;
+        width: auto;
+    }
+
+    @keyframes blink{
+        0%, 50% {opacity: 1;}
+        51%, 100% {opacity: 0;}
+    }
+</style>
