@@ -3,5 +3,49 @@ import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout class="resume">
-    RESUME
+    <section class="resume-viewer">
+        <h1>My <span>Resume</span></h1>
+
+        <div class="pdf-viewer">
+            <iframe
+                    src="/resume.pdf"
+                    width="100%"
+                    height="100%"
+                    style="border:1px solid var(--accent);"
+                    title="Resume PDF">
+            </iframe>
+        </div>
+
+        <a href="/resume.pdf" download class="download-btn">Download PDF</a>
+    </section>
+
 </Layout>
+
+<style>
+    .pdf-viewer {
+        width: 100%;
+        aspect-ratio: 595/925;
+
+        max-width: 800px;
+        max-height: 1190px;
+    }
+
+    .resume-viewer {
+        padding: 4rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .download-btn {
+        margin-top: 1rem;
+        padding: 0.75rem 1.5rem;
+        background: var(--accent);
+        color: white;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 600;
+    }
+</style>
