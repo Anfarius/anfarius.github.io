@@ -84,6 +84,7 @@ span {
     max-width: 60%;
     min-width: 415px;
     background-color: var(--bg);
+    z-index: 5;
 }
 
  a{
