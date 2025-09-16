@@ -1,20 +1,97 @@
 ---
-import { creditData } from "../data/credits-data"
-import Layout from "../layouts/Layout.astro"
+import { creditData } from "../data/credits-data";
+import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets';
 ---
 
 <Layout class="credits">
+    <div class="credits-container">
+        <h1>My <span>Credits</span></h1>
+    </div>
     <section class="credits-grid">
         {creditData.map((credit) => (
-            <a href={credit.storeLink} target="_blank" rel="noopener noreferrer" class="project-card">
-                <div class="credit-bg" style={`background-image: url(${credit.image});`}></div>
-                <div class="overlay">
-                    <h2></h2>
-                    <p class="role">{credit.role}</p>
-                    <p>{credit.year}</p>
-                    <p>{credit.platforms}</p>
-                </div>
-            </a>
+                <a href={credit.storeLink} target="_blank" rel="noopener noreferrer" class="credit-card">
+                    <Image src={credit.image} alt={credit.title} class="credit-bg-img" />
+                    <div class="overlay">
+                        <h2>{credit.title}</h2>
+                        <p class="role">{credit.role}</p>
+                        <p>{credit.year}</p>
+                        <p>{credit.platforms}</p>
+                    </div>
+                </a>
         ))}
     </section>
 </Layout>
+
+<style>
+    .credits-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 0 0 0;
+    }
+
+    .credits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+        grid-auto-rows: minmax(225px, auto);
+        justify-items: center;
+        padding: 2rem 0;
+        }
+
+    .credit-card {
+        position: relative;
+        display: block;
+        color: white;
+        border-radius: 12px;
+        overflow: hidden;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        width: 20rem;
+        height: 11rem;
+        }
+
+    .credit-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+    .credit-bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.6);
+        z-index: 0;
+        }
+
+    .overlay {
+        position: relative;
+        z-index: 1;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-end;
+        }
+
+    .overlay h2 {
+        margin: 0 0 0.5rem 0;
+        font-size: clamp(1rem, 1.5rem ,1.5rem)
+        }
+
+    .overlay .role {
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        }
+
+    .overlay p {
+        margin: 0;
+        font-size: 0.9rem;
+        }
+</style>
