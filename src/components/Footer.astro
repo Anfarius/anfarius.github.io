@@ -31,8 +31,20 @@
                     </a>
                 </nav>
             </div>
-            <div class="email"><b>Contact me at<br><span>kacper.kaczmarzyk@gmail.com</span></b></div>
+            <div class="email"><b>Contact me at<br>
+                <span><a id="email-link"></a></span></b></div>
         </div>
-        <div class="copyright">© 2025 Kacper Kaczmarzyk. Made with <span>Astro</span> and too many browser tabs.</span></div>
+        <div class="copyright">© 2025 Kacper Kaczmarzyk. Made with <span>Astro</span> and too many browser tabs.</div>
     </div>
 </div>
+
+<script>
+    const user = "kacper.kaczmarzyk";
+    const domain = "gmail.com";
+    const email = `${user}@${domain}`;
+
+    const link = document.getElementById("email-link");
+    link.href = `mailto:${email}`;
+    link.textContent = email;
+</script>
+
