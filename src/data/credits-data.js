@@ -10,6 +10,12 @@ import Lir from '../assets/banners/lir-banner.jpg'
 import Powerwash from '../assets/banners/powerwash-banner.jpg'
 import Realpolitiks from '../assets/banners/realpolitiks2-banner.jpeg'
 import CK3 from '../assets/banners/ck3-banner.jpg'
+import EU4Emperor from '../assets/banners/eu4emperor-banner.jpeg'
+import Mutazione from '../assets/banners/mutazione-banner.jpeg'
+import Dds from '../assets/banners/dds-banner.jpg'
+import KURSK from '../assets/banners/kursk-banner.jpg'
+import Elderborn from '../assets/banners/elderborn-banner.jpg'
+import Golf from '../assets/banners/golf-banner.jpg'
 
 export const creditData = [
     {
@@ -94,6 +100,15 @@ export const creditData = [
         storeLink: "https://store.steampowered.com/app/1158310/Crusader_Kings_III/"
     },
     {
+        title: "Europa Universalis IV: Emperor",
+        year: "2020",
+        developer: "Paradox Development Studio",
+        platforms: "PC",
+        role: "FQA Project Lead",
+        image: EU4Emperor,
+        storeLink: "https://store.steampowered.com/app/1259360/Expansion__Europa_Universalis_IV_Emperor/"
+    },
+    {
         title: "Realpolitiks 2",
         year: "2020",
         developer: "Jujubee",
@@ -101,5 +116,50 @@ export const creditData = [
         role: "QA Tester",
         image: Realpolitiks,
         storeLink: "https://store.steampowered.com/app/1248060/Realpolitiks_II/"
+    },
+    {
+        title: "Mutazione",
+        year: "2019",
+        developer: "Die Gute Fabrik ApS",
+        platforms: "iOS",
+        role: "FQA Senior Tester",
+        image: Mutazione,
+        storeLink: "https://apps.apple.com/us/app/mutazione/id6642644622"
+    },
+    {
+        title: "Deep Diving Simulator",
+        year: "2019",
+        developer: "Jujubee",
+        platforms: "PC",
+        role: "QA Tester",
+        image: Dds,
+        storeLink: "https://store.steampowered.com/app/990030/Deep_Diving_Simulator/"
+    },
+    {
+        title: "Elderborn",
+        year: "2018",
+        developer: "Hyperstrange",
+        platforms: "PC",
+        role: "FQA Senior Tester",
+        image: Elderborn,
+        storeLink: "https://store.steampowered.com/app/727850/ELDERBORN/"
+    },
+    {
+        title: "Kursk",
+        year: "2018",
+        developer: "Jujubee",
+        platforms: "PC",
+        role: "QA Lead",
+        image: KURSK,
+        storeLink: "https://store.steampowered.com/app/860620/KURSK/"
+    },
+    {
+        title: "Golf With Your Friends",
+        year: "2016",
+        developer: "Blacklight Interactive",
+        platforms: "PC, PS4, Xbox One, Nintendo Switch",
+        role: "Additional QA",
+        image: Golf,
+        storeLink: "https://store.steampowered.com/app/431240/Golf_With_Your_Friends/"
     },
 ];
