@@ -149,11 +149,6 @@ a:focus-visible {
     outline: none;
 }
 
-a:hover span,
-a:focus-visible span {
-    color: var(--accent2);
-}
-
 .about {
     display: flex;
     flex-direction: column;
