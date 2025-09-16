@@ -1,7 +1,9 @@
 ---
 // simple header component
 
-import Logo from './Logo.astro'
+import Logo from './Logo.astro';
+import { Image } from 'astro:assets';
+import Photo from '../assets/photo.jpg';
 ---
 
 <header class="site-header" id="site-header">
@@ -9,7 +11,7 @@ import Logo from './Logo.astro'
         <h1 class="logo" id="logo">
             <Logo class="logo" />
             <a href="/">Kacper <span>Kaczmarzyk</span></a>
-            <img src="/src/assets/Photo.JPG" alt="headshot" class="photo"/>
+            <Image src={Photo} alt="headshot" class="photo"/>
         </h1>
         <div class="menu-container" id="menu-container">
             <nav class="menu">

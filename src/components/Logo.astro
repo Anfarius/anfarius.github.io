@@ -1,10 +1,15 @@
 ---
 // Animated Logo
+
+import { Image } from 'astro:assets';
+import Caret from '../assets/Logo/Caret_white.png';
+import K from '../assets/Logo/<_white.png';
+
 ---
 
 <div class="logo-container">
-    <img src="/src/assets/Logo/Caret_white.png" alt="caret" class="caret" />
-    <img src="/src/assets/Logo/<_white.png" alt="<" />
+    <Image src={Caret} alt="caret" class="caret" />
+    <Image src={K} alt="<" />
 </div>
 
 <style>
